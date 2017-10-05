@@ -44,7 +44,7 @@ public class StockCommercialDataProcess {
 				} else {
 					isCheck=false;
 				}
-			} while(true);	
+			} while(isCheck);	
 		} catch(Exception ex) {
 			System.out.println(ex);
 			ex.printStackTrace();

@@ -2,8 +2,6 @@ package com.bridgeit.javaObjectOrientedPrograms.Programs;
 
 
 
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Scanner;
 
 import com.bridgeit.javaObjectOrientedPrograms.Utility.Utility;
@@ -14,7 +12,7 @@ public class CliniqueManagement {
 		Scanner scanner = new Scanner(System.in);
 		try
 		{
-			LinkedList<Integer> list=Utility.genearteIds();
+			//Utility.genearteIds();
 			boolean isContinue=true;
 			do {	
 				System.out.println("Enter your choice:");
@@ -25,9 +23,9 @@ public class CliniqueManagement {
 				System.out.println("5. Exit");
 				int choice = scanner.nextInt();
 				switch(choice) {
-				case 1 :	 Utility.addDoctor(list);
+				case 1 :	 Utility.addDoctor();
 							 break;
-				case 2 :	Utility.addPatient(list);
+				case 2 :	Utility.addPatient();
 							break;
 				case 3 :	System.out.println("Enter whose details you want to see press D for doctor and P for Patient ");
 							String ch= scanner.next().toLowerCase();
@@ -58,6 +56,8 @@ public class CliniqueManagement {
 		catch(Exception e)
 		{
 			e.printStackTrace();
+		} finally {
+			scanner.close();
 		}
 	}
 
